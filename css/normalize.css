@@ -1,0 +1,56 @@
+/* normalize.css — minimal reset (AI-generated) */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background: #fbfdff;
+  color: #042023;
+}
+main {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin: 0;
+}
+p,
+ul,
+ol {
+  margin: 0 0 1rem 0;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button {
+  font: inherit;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+:focus {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}

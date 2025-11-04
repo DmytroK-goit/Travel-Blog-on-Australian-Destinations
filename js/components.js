@@ -1,10 +1,5 @@
 (function () {
-  const logoSvg = `
-    <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect width="100%" height="100%" fill="#003244" rx="8"/>
-      <text x="32" y="38" font-size="20" fill="#ffd166" font-family="Arial" text-anchor="middle">TC</text>
-    </svg>
-  `;
+  const logoSvg = "../assets/logo.png";
 
   function getPathPrefix() {
     return "./";
@@ -14,16 +9,16 @@
 
   const headerHtml = `
   <header class="header" role="banner">
-    <div class="container header-inner">
-      <div class="logo">
-        <a href="${p}" class="logo-link">
-          ${logoSvg}
-          <div class="logo-text">
-            <strong>Travel Crown</strong>
-            <div class="subtitle">Australian Destinations</div>
-          </div>
-        </a>
-      </div>
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="${p}" class="logo-link">
+        <img src="${logoSvg}"  alt="Travel Crown logo" class="logo-img" />
+        <div class="logo-text">
+          <strong>Travel Crown</strong>
+          <div class="subtitle">Australian Destinations</div>
+        </div>
+      </a>
+    </div>
 
       <button class="menu-toggle" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -61,7 +56,6 @@
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // === Mobile menu toggle ===
   document.addEventListener("click", function (e) {
     const btn = e.target.closest(".menu-toggle");
     const nav = document.querySelector(".nav");

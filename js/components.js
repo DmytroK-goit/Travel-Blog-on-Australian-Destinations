@@ -14,16 +14,21 @@
 
   const headerHtml = `
   <header class="header" role="banner">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
-      <div class="logo" aria-hidden="false">
-        <a href="${p}" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:inherit;">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="${p}" class="logo-link">
           ${logoSvg}
-          <div style="font-size:14px">
+          <div class="logo-text">
             <strong>Travel Crown</strong>
-            <div style="font-size:11px;color:#596f7f">Australian Destinations</div>
+            <div class="subtitle">Australian Destinations</div>
           </div>
         </a>
       </div>
+
+      <button class="menu-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <a href="${p}#latest">Latest</a>
         <a href="${p}travel-guides.html">Travel Guides</a>
@@ -35,12 +40,15 @@
 
   const footerHtml = `
   <footer class="footer" role="contentinfo">
-    <div class="container" style="display:flex;flex-direction:column;gap:.5rem;">
-      <div style="display:flex;justify-content:space-between;align-items:center;">
+    <div class="container footer-inner">
+      <div class="footer-top">
         <div><strong>Travel Crown</strong> — Australia</div>
-        <div><a href="${p}privacy.html">Privacy</a> &nbsp;|&nbsp; <a href="${p}cookie-policy.html">Cookie Policy</a></div>
+        <div class="footer-links">
+          <a href="${p}privacy.html">Privacy</a> &nbsp;|&nbsp;
+          <a href="${p}cookie-policy.html">Cookie Policy</a>
+        </div>
       </div>
-      <div style="font-size:.9rem;color:#e6f6ff">© <span id="year"></span> Travel Crown</div>
+      <div class="footer-bottom">© <span id="year"></span> Travel Crown</div>
     </div>
   </footer>`;
 
@@ -52,4 +60,14 @@
 
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
+
+  // === Mobile menu toggle ===
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".menu-toggle");
+    const nav = document.querySelector(".nav");
+    if (btn && nav) {
+      nav.classList.toggle("open");
+      btn.classList.toggle("active");
+    }
+  });
 })();

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Travel Crown Blog</title>
+    <meta
+      name="description"
+      content="Contact page for Travel Crown Blog — reach out for feedback, collaborations, or questions about Australian destinations."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='100%' height='100%' fill='%23003244' rx='10'/><text x='32' y='38' font-size='20' fill='%23ffd166' font-family='Arial' text-anchor='middle'>TC</text></svg>"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+      <h1>Contact Us</h1>
+      <p>
+        We’d love to hear from you! Whether you have a story suggestion, want to
+        collaborate, or simply share your travel experiences — our team is open
+        to conversation.
+      </p>
+
+      <section class="contact-section">
+        <form class="contact-form" id="contact-form">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Smith"
+          />
+
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Type your message..."
+          ></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+
+      <p class="text-sm">
+        You can also reach us directly at
+        <a href="mailto:contact@travelcrownblog.com"
+          >contact@travelcrownblog.com</a
+        >.
+      </p>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="./js/components.js"></script>
+    <script src="./js/cookiebar.js"></script>
+    <script>
+      // Simple feedback form handling (demo only)
+      document
+        .getElementById("contact-form")
+        ?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Thank you for reaching out! We will get back to you soon.");
+          e.target.reset();
+        });
+    </script>
+  </body>
+</html>

@@ -17,3 +17,7 @@ Clone the repo and open `index.html` in your browser.
 ```bash
 git clone https://github.com/DmytroK-goit/Travel-Blog-on-Australian-Destinations.git
 ```
+👨‍💻 Author
+
+Dmytro Kovbasyuk
+📧 k0vbasyuk.dim0n@gmail.com
